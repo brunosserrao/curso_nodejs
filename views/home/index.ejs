@@ -1,0 +1,33 @@
+<% include ../header %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+            <header>
+                <h1 class="text-center">Ntalk</h1>
+            </header>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+            <section>
+                <form method="post" action="/entrar">
+                    <div class="form-group">
+                        <label>Nome</label>
+                        <input type="text" name="usuario[nome]" class="form-control" placeholder="Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="text" name="usuario[email]" class="form-control" placeholder="E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                    </div>
+                </form>
+            </section>           
+        </div>
+    </div>
+</div>
+    
+<% include ../footer %>
