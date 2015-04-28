@@ -1,9 +1,12 @@
 module.exports = function(app) {
     var ContatosController = {
         index: function(res, req) {
-            var usuario = req.session.usuario;
-            var params = {usuario: usuario};
-            res.render('contatos/index', params);
+        	console.log(req.client);
+            // var usuario = req.session.usuario;
+            var usuario = {nome :'bruno serrao', email: 'brunosserrao@gmail.com'};
+            // console.log(usuario);
+            // var params = {usuario: usuario};
+            // res.render('contatos/index', params);
         }
     };
     

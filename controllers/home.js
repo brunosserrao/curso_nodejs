@@ -5,17 +5,17 @@ module.exports = function(app) {
         },
         login: function(req, res) {
             var nome = req.body.usuario.nome;
-            var email = req.body.usuario.senha;
+            var email = req.body.usuario.email;
             
-                if(nome && email) {
-                    var usuario = req.body.usuario;
-                    usuario['contatos'] = [];
-                    req.session.usuario = usuario;
-                    res.redirect('/contatos');
-                }
-                else {
-                    res.redirect('/');
-                }
+            if(nome && email) {
+                var usuario = req.body.usuario;
+                usuario['contatos'] = [];
+                req.session.usuario = usuario;
+                res.redirect('/contatos');
+            }
+            else {
+                res.redirect('/');
+            }
         },
         logout: function(req, res) {
             req.session.destroy();
